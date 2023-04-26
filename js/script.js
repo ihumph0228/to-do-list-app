@@ -7,12 +7,11 @@ function newItem(){
        li.appendChild(inputValue);
     
        if (inputValue === '') {
-         alert("You must write something!");
+         alert('You must write something!');
        } else {
-         let list = document.querySelector('#list');
-         list.appendChild(li);
+         $('#list').append(li);
        }
-    
+       
      //2. Crossing out an item from the list of items:
        function crossOut() {
              li.classList.toggle("strike");
