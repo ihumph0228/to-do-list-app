@@ -23,12 +23,11 @@ function newItem(){
     crossOutButton.append(document.createTextNode('X'));
     li.append(crossOutButton);
     
-         crossOutButton.addEventListener("click", deleteListItem);
-     //3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
-       function deleteListItem(){
-             li.classList.add("delete")
-         }
-     // 4. Reordering the items: 
-       $('#list').sortable();
-    
-    }
+      // 3(ii). Adding CLASS DELETE (DISPLAY: NONE) from the css:
+  crossOutButton.on('click', function() {
+    li.addClass('delete');
+  });
+
+  // 4. Reordering the items:
+  $('#list').sortable();
+}
